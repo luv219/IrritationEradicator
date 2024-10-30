@@ -2,7 +2,7 @@
 
 // Global variables
 let clickCount = 0;
-const maxClicks = 20;
+const maxClicks = 40;
 
 // Utility function to get mouse position on canvas
 function getMousePos(canvas, evt) {
@@ -172,7 +172,7 @@ function initializeBurnFeature() {
 
 // Function to burn (erase) the clicked area with visible colors
 function burnClickedArea(ctx, x, y) {
-  const burnRadius = 60;
+  const burnRadius = 100;
 
   // First, draw the flame effect
   const gradient = ctx.createRadialGradient(x, y, 0, x, y, burnRadius);
@@ -199,8 +199,8 @@ function burnClickedArea(ctx, x, y) {
 
 // Function for aggressive final burning animation with colors
 function burnFullImage(ctx, canvas) {
-  const burnSpeed = 4; // Adjust for faster or slower burn
-  const pointCount = 30; // Number of points defining the burn edge
+  const burnSpeed = 6; // Adjust for faster or slower burn
+  const pointCount = 50; // Number of points defining the burn edge
   const points = [];
 
   // Initialize points along the bottom of the image
